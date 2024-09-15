@@ -170,3 +170,56 @@ img {
 #button4:checked ~ .navigation .meme-texts .text-block {
   margin-top: -16.6%;
 }
+
+@media screen and (max-width: 970px) {
+  .slider-image {
+    width: 92.7835051546vw;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 3.09278350515vw;
+  }
+
+  .meme-texts {
+    width: 72.1649484536vw;
+    height: 3.81443298969vw;
+  }
+
+  .navigation-buttons {
+    column-gap: 0.20618556701vw;
+  }
+
+  .label {
+    width: 4.94845360825vw;
+    height: 4.74226804124vw;
+  }
+
+  .navigation-button {
+    width: 2.0618556701vw;
+    height: 2.0618556701vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .meme-texts {
+    align-self: flex-start;
+  }
+
+  .navigation-buttons {
+    order: -1;
+    margin-bottom: 1vh;
+  }
+}
