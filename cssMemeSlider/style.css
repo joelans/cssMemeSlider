@@ -20,6 +20,8 @@ body {
 p {
   font-size: 1.875rem;
   color: aliceblue;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -50,6 +52,22 @@ img {
   border-radius: 1rem;
 }
 
+.meme-texts {
+  display: flex;
+  overflow: hidden;
+  width: 43.75rem;
+  height: 2.3125rem;
+}
+
+.text-block {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+
+  flex-direction: column;
+}
+
 
 .meme-buttons {
   display: flex;
@@ -71,4 +89,22 @@ img {
 
 #button4:checked ~ .slider-image .block {
   margin-left: -300%;
+}
+
+
+
+#button1:checked ~ .meme-texts .text-block {
+  margin-top: 0%;
+}
+
+#button2:checked ~ .meme-texts .text-block {
+  margin-top: -5%;
+}
+
+#button3:checked ~ .meme-texts .text-block {
+  margin-top: -10%;
+}
+
+#button4:checked ~ .meme-texts .text-block {
+  margin-top: -15%;
 }
