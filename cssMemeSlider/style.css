@@ -130,21 +130,27 @@ img {
   transition: 0s;
 }
 
-#button1:checked ~ .navigation .navigation-buttons .label1 .navigation-button:hover, 
-#button2:checked ~ .navigation .navigation-buttons .label2 .navigation-button:hover, 
-#button3:checked ~ .navigation .navigation-buttons .label3 .navigation-button:hover, 
-#button4:checked ~ .navigation .navigation-buttons .label4 .navigation-button:hover  {
-  border-color: aliceblue;
-  transition: 0.7s;
+
+#button1:checked ~ .navigation .navigation-buttons .label1:hover, 
+#button2:checked ~ .navigation .navigation-buttons .label2:hover, 
+#button3:checked ~ .navigation .navigation-buttons .label3:hover, 
+#button4:checked ~ .navigation .navigation-buttons .label4:hover {
+  .navigation-button {
+    border-color: aliceblue;
+    transition: 0.1s;
+  }
 }
 
-#button1:checked ~ .navigation .navigation-buttons .label1 .navigation-button:active, 
-#button2:checked ~ .navigation .navigation-buttons .label2 .navigation-button:active, 
-#button3:checked ~ .navigation .navigation-buttons .label3 .navigation-button:active, 
-#button4:checked ~ .navigation .navigation-buttons .label4 .navigation-button:active  {
-  border-color: #f29010;
-  transition: 0.7s;
+#button1:checked ~ .navigation .navigation-buttons .label1:active, 
+#button2:checked ~ .navigation .navigation-buttons .label2:active, 
+#button3:checked ~ .navigation .navigation-buttons .label3:active, 
+#button4:checked ~ .navigation .navigation-buttons .label4:active {
+  .navigation-button {
+    border-color: #f29010;
+    transition: 0.7s;
+  }
 }
+
 
 #button1:checked ~ .navigation .navigation-buttons .label1, 
 #button2:checked ~ .navigation .navigation-buttons .label2, 
