@@ -130,11 +130,27 @@ img {
   transition: 0s;
 }
 
+#button1:checked ~ .navigation .navigation-buttons .label1 .navigation-button:hover, 
+#button2:checked ~ .navigation .navigation-buttons .label2 .navigation-button:hover, 
+#button3:checked ~ .navigation .navigation-buttons .label3 .navigation-button:hover, 
+#button4:checked ~ .navigation .navigation-buttons .label4 .navigation-button:hover  {
+  border-color: aliceblue;
+  transition: 0.7s;
+}
+
+#button1:checked ~ .navigation .navigation-buttons .label1 .navigation-button:active, 
+#button2:checked ~ .navigation .navigation-buttons .label2 .navigation-button:active, 
+#button3:checked ~ .navigation .navigation-buttons .label3 .navigation-button:active, 
+#button4:checked ~ .navigation .navigation-buttons .label4 .navigation-button:active  {
+  border-color: #f29010;
+  transition: 0.7s;
+}
+
 #button1:checked ~ .navigation .navigation-buttons .label1, 
 #button2:checked ~ .navigation .navigation-buttons .label2, 
 #button3:checked ~ .navigation .navigation-buttons .label3, 
 #button4:checked ~ .navigation .navigation-buttons .label4 {
-  cursor: default;
+  cursor: pointer;
 }
 
 #button1:checked ~ .slider-image .block {
