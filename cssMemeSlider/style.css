@@ -181,7 +181,8 @@ img {
   }
 
   img {
-    width: 100%;
+    /* width: 100%; */
+    width: 92.7835051546vw;
     height: auto;
   }
 
