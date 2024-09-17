@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("./assets/fonts/liberation-serif.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #3e3e3e;
+
+}
+
+p {
+  font-family: LiberationSerif;
+  font-size: 1.875rem;
+  color: aliceblue;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.slider-image {
+  display: flex;
+  /* width: 900px; */
+  width: 56.25rem;
+  
+  overflow: hidden;
+  margin-bottom: 2vh;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+.meme-texts {
+  display: flex;
+  overflow: hidden;
+  width: 43.75rem;
+  height: 2.3125rem;
+}
+
+.text-block {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+
+  flex-direction: column;
+}
+
+
+.slider input {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  column-gap: 0.125rem;
+}
+
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.875rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navigation-button {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: blue;
+  border-radius: 50%;
+  transition: 0.7s;
+}
+
+.label:hover {
+  .navigation-button { 
+    background-color: aliceblue;
+  }
+}
+
+.label:active {
+  .navigation-button {
+    background-color: #f29010;
+  }
+}
+
+#button1:checked ~ .navigation .navigation-buttons .label1 .navigation-button, 
+#button2:checked ~ .navigation .navigation-buttons .label2 .navigation-button, 
+#button3:checked ~ .navigation .navigation-buttons .label3 .navigation-button, 
+#button4:checked ~ .navigation .navigation-buttons .label4 .navigation-button  {
+  border: 0.15625rem solid blue;
+  background: #3e3e3e;
+  transition: 0s;
+}
+
+
+#button1:checked ~ .navigation .navigation-buttons .label1:hover, 
+#button2:checked ~ .navigation .navigation-buttons .label2:hover, 
+#button3:checked ~ .navigation .navigation-buttons .label3:hover, 
+#button4:checked ~ .navigation .navigation-buttons .label4:hover {
+  .navigation-button {
+    border-color: aliceblue;
+    transition: 0.1s;
+  }
+}
+
+#button1:checked ~ .navigation .navigation-buttons .label1:active, 
+#button2:checked ~ .navigation .navigation-buttons .label2:active, 
+#button3:checked ~ .navigation .navigation-buttons .label3:active, 
+#button4:checked ~ .navigation .navigation-buttons .label4:active {
+  .navigation-button {
+    border-color: #f29010;
+    transition: 0.7s;
+  }
+}
+
+
+#button1:checked ~ .navigation .navigation-buttons .label1, 
+#button2:checked ~ .navigation .navigation-buttons .label2, 
+#button3:checked ~ .navigation .navigation-buttons .label3, 
+#button4:checked ~ .navigation .navigation-buttons .label4 {
+  cursor: pointer;
+}
+
+#button1:checked ~ .slider-image .block {
+  margin-left: 0%;
+}
+
+#button2:checked ~ .slider-image .block {
+  margin-left: -100%;
+}
+
+#button3:checked ~ .slider-image .block {
+  margin-left: -200%;
+}
+
+#button4:checked ~ .slider-image .block {
+  margin-left: -300%;
+}
+
+
+
+#button1:checked ~ .navigation .meme-texts .text-block {
+  margin-top: -0.3%;
+}
+
+#button2:checked ~ .navigation .meme-texts .text-block {
+  margin-top: -5.8%;
+}
+
+#button3:checked ~ .navigation .meme-texts .text-block {
+  margin-top: -11.2%;
+}
+
+#button4:checked ~ .navigation .meme-texts .text-block {
+  margin-top: -16.6%;
+}
+
+@media screen and (max-width: 970px) {
+  .slider-image {
+    width: 92.7835051546vw;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  img {
+    /* width: 100%; */
+    width: 92.7835051546vw;
+    height: auto;
+  }
+
+  p {
+    font-size: 3.09278350515vw;
+  }
+
+  .meme-texts {
+    width: 72.1649484536vw;
+    height: 3.81443298969vw;
+  }
+
+  .navigation-buttons {
+    column-gap: 0.20618556701vw;
+  }
+
+  .label {
+    width: 4.94845360825vw;
+    height: 4.74226804124vw;
+  }
+
+  .navigation-button {
+    width: 2.0618556701vw;
+    height: 2.0618556701vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .meme-texts {
+    align-self: flex-start;
+  }
+
+  .navigation-buttons {
+    order: -1;
+    margin-bottom: 2vh;
+  }
+}
